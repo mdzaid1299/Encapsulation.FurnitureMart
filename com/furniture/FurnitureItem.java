@@ -4,7 +4,7 @@ public class FurnitureItem {
     private int furnitureCode;
     private String furnitureType;
     private String colour;
-    private String gradeOfFurniture;
+    private int gradeOfFurniture;
     private String furnitureUsage;
     private double price;
 
@@ -12,7 +12,7 @@ public class FurnitureItem {
 
     FurnitureItem() {
         furnitureCode = 0;
-        gradeOfFurniture = "";
+        gradeOfFurniture = 0;
         furnitureType = "";
         colour = "";
         furnitureUsage = "";
@@ -35,11 +35,11 @@ public class FurnitureItem {
         this.furnitureType = furnitureType;
     }
 
-    public String getGradeOfFurniture() {
+    public int getGradeOfFurniture() {
         return gradeOfFurniture;
     }
 
-    public void setGradeOfFurniture(String gradeOfFurniture) {
+    public void setGradeOfFurniture(int gradeOfFurniture) {
         this.gradeOfFurniture = gradeOfFurniture;
     }
     public String getColour() {
@@ -68,11 +68,11 @@ public class FurnitureItem {
 
     public double calculateDiscount() {
         double temp = 0.0;
-        if (furnitureUsage.equals("Outdoor") && gradeOfFurniture.equals("1")) {
-            temp = (price - (price * DISCOUNT) / 100);
+        if (furnitureUsage.equals("Outdoor") && gradeOfFurniture == 1) {
+            temp = (price - (price * DISCOUNT) /100);
         } else {
             temp = price;
         }
-        return price;
+        return temp;
     }
 }

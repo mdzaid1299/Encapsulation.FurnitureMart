@@ -6,8 +6,8 @@ public class FurnitureImpl {
         furnitureItem.setFurnitureCode(101);
         furnitureItem.setFurnitureType("Table");
         furnitureItem.setFurnitureUsuage("Outdoor");
-        furnitureItem.setGradeOfFurniture("1");
-//        furnitureItem.setColour();
+        furnitureItem.setGradeOfFurniture(1);
+       furnitureItem.setColour("BLACK");
         furnitureItem.setPrice(10.0); //in $
 
         System.out.println("final price " + furnitureItem.calculateDiscount());
